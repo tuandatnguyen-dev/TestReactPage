@@ -4,10 +4,9 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 import { LoginPage } from "./components/LoginPage";
 import { HomePage } from "./components/HomePage";
-import { useAuth } from "./context/AuthContext";
 
 // Change this to a function that returns the element directly
 const PrivateRoute = () => {

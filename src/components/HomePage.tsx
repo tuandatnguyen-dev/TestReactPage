@@ -9,17 +9,17 @@ export const HomePage: React.FC = () => {
     const navigate = useNavigate();
 
     // Hardcoding Credentials
-    const username = "admin"; // Hardcoded username
-    const password = "P@ssw0rd123"; // Hardcoded password
-    console.log(`User details: ${username} ${password}`)
+    // const username = "admin"; // Hardcoded username
+    // const password = "P@ssw0rd123"; // Hardcoded password
+    // console.log(`User details: ${username} ${password}`)
 
     // Unused Variables
-    const unusedVariable = 42;
+    // const unusedVariable = 42;
 
     // Inconsistent Naming
     const userName = "John"; // camelCase
-    const UserEmail = "john@example.com"; // PascalCase
-    console.log(userName, UserEmail);
+    const userEmail = "john@example.com"; // Changed to camelCase
+    console.log(userName, userEmail);
 
     const handleLogout = () => {
         logout();
@@ -28,43 +28,45 @@ export const HomePage: React.FC = () => {
 
     //#region Duplicated Code
 
-    const handleLogout1 = () => {
-        logout();
-        navigate("/");
-    };
+    // Commented out duplicated functions
+    // const handleLogout1 = () => {
+    //     logout();
+    //     navigate("/");
+    // };
 
-    const handleLogout2 = () => {
-        logout();
-        navigate("/");
-    };
+    // const handleLogout2 = () => {
+    //     logout();
+    //     navigate("/");
+    // };
 
-    const handleLogout3 = () => {
-        logout();
-        navigate("/");
-    };
+    // const handleLogout3 = () => {
+    //     logout();
+    //     navigate("/");
+    // };
 
-    const handleLogout4 = () => {
-        logout();
-        navigate("/");
-    };
+    // const handleLogout4 = () => {
+    //     logout();
+    //     navigate("/");
+    // };
 
     // Use duplicated functions
-    handleLogout1();
-    handleLogout2();
-    handleLogout3();
-    handleLogout4();
+    // handleLogout1();
+    // handleLogout2();
+    // handleLogout3();
+    // handleLogout4();
 
     //#endregion
 
     // Magic Numbers
     function calculateArea(radius: number): number {
-        return 3.14159 * radius * radius; // Magic number for Pi
+        const pi = 3.14159; // Defined constant for Pi
+        return pi * radius * radius;
 
         // Unreachable Code
-        function processData(): void {
-            return;
-            console.log("This line is never reached");
-        }
+        // function processData(): void {
+        //     return;
+        //     console.log("This line is never reached");
+        // }
     }
     console.log(calculateArea(5)); 
 
@@ -76,29 +78,20 @@ export const HomePage: React.FC = () => {
         password: string,
         useSsl: boolean,
         timeout: number,
-        timeout2: number,
-        timeout3: number,
-        timeout4: number,
-        timeout5: number,
-        timeout6: number,
+        // timeout2: number,
+        // timeout3: number,
+        // timeout4: number,
+        // timeout5: number,
+        // timeout6: number,
         protocol: string,
     ): void {
         // Configuration logic
-        console.log(host, port, username, password, useSsl, timeout, timeout2, timeout3, timeout4, timeout5, timeout6, protocol);
+        console.log(host, port, username, password, useSsl, timeout, protocol);
     }
-    configure("localhost", 8080, "user", "pass", true, 1000, 1000, 1000, 1000, 1000, 1000, "http");
+    configure("localhost", 8080, "user", "pass", true, 1000, "http");
 
     // Overuse Comments
     function add(a: number, b: number): number {
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
-        // This function adds two numbers
         // This function adds two numbers
         return a + b;
     }
@@ -110,22 +103,23 @@ export const HomePage: React.FC = () => {
             function stepOneA() {
                 function stepOneA1() {
                     console.log("Deeply nested function");
-                    function stepOneA2() {
-                        console.log("Deeply nested function");
-                        function stepOneA3() {
-                            console.log("Deeply nested function");
-                            function stepOneA4() {
-                                console.log("Deeply nested function");
-                                function stepOneA5() {
-                                    console.log("Deeply nested function");
-                                }
-                                stepOneA5();
-                            }
-                            stepOneA4();
-                        }
-                        stepOneA3();
-                    }
-                    stepOneA2();
+                    // Removed excessive nesting
+                    // function stepOneA2() {
+                    //     console.log("Deeply nested function");
+                    //     function stepOneA3() {
+                    //         console.log("Deeply nested function");
+                    //         function stepOneA4() {
+                    //             console.log("Deeply nested function");
+                    //             function stepOneA5() {
+                    //                 console.log("Deeply nested function");
+                    //             }
+                    //             stepOneA5();
+                    //         }
+                    //         stepOneA4();
+                    //     }
+                    //     stepOneA3();
+                    // }
+                    // stepOneA2();
                 }
                 stepOneA1();
             }
@@ -152,12 +146,12 @@ export const HomePage: React.FC = () => {
 
     // Unused Methods
     class Example {
-        unusedMethod(): void {
-            console.log("This method is never called");
+        // unusedMethod(): void {
+        //     console.log("This method is never called");
 
-            // Unnecessary Method Calls
-            redundantMethod();
-        }
+        //     // Unnecessary Method Calls
+        //     redundantMethod();
+        // }
     }
 
     function redundantMethod(): void {
@@ -167,32 +161,30 @@ export const HomePage: React.FC = () => {
     // Redundant Type Casting
     function displayNumber(): void {
         const number = 42;
-        console.log(number as number); // Redundant type casting
+        console.log(number); // Removed redundant type casting
     }
     displayNumber();
 
     // Redundant Initialization
     function initializeValue(): void {
-        let value = 0; // Redundant initialization
-        value = 10;
+        let value = 10; // Removed redundant initialization
         console.log(value);
     }
     initializeValue();
 
     // Unnecessary Null Checks
     function printMessage(message: string): void {
-        if (message !== null) { // Unnecessary null check
-            console.log(message);
-        }
+        // Removed unnecessary null check
+        console.log(message);
     }
     printMessage("Hello, world!");
 
     // Uncommunicative Name
     function calculate(): void {
-        const x = 10; // What does x represent?
-        const y = 20; // What does y represent?
-        const z = x + y; // What does z represent?
-        console.log(z);
+        const firstNumber = 10; // Improved variable name
+        const secondNumber = 20; // Improved variable name
+        const sum = firstNumber + secondNumber; // Improved variable name
+        console.log(sum);
     }
     calculate();
 
@@ -201,227 +193,7 @@ export const HomePage: React.FC = () => {
         console.log("Starting process...");
         data.forEach((item) => {
             console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-            console.log(`Processing item: ${item}`);
-
+            // Removed excessive repetition
             // Simulate complex logic
             for (let i = 0; i < 100; i++) {
                 console.log(`Step ${i} for item ${item}`);
