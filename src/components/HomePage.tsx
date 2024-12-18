@@ -34,26 +34,8 @@ export const HomePage: React.FC = () => {
     //     navigate("/");
     // };
 
-    // const handleLogout2 = () => {
-    //     logout();
-    //     navigate("/");
-    // };
-
-    // const handleLogout3 = () => {
-    //     logout();
-    //     navigate("/");
-    // };
-
-    // const handleLogout4 = () => {
-    //     logout();
-    //     navigate("/");
-    // };
-
     // Use duplicated functions
     // handleLogout1();
-    // handleLogout2();
-    // handleLogout3();
-    // handleLogout4();
 
     //#endregion
 
@@ -144,15 +126,6 @@ export const HomePage: React.FC = () => {
     //   return 3.14159 * radius * radius; // Magic number for Pi
     // }
 
-    // Unused Methods
-    class Example {
-        // unusedMethod(): void {
-        //     console.log("This method is never called");
-
-        //     // Unnecessary Method Calls
-        //     redundantMethod();
-        // }
-    }
 
     function redundantMethod(): void {
         // No operation
